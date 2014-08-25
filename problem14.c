@@ -39,5 +39,5 @@ int main( int argc, char **argv )
             starting_number = i;
         }
     }
-    printf("result: %d\n with chain size:%d", starting_number, highest);
+    printf("result: %d with chain size:%d\n", starting_number, highest);
 }
