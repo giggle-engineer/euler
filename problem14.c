@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <unistd.h>
 
 int collatz_length( const int starting_number )
 {
