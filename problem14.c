@@ -4,19 +4,17 @@
 
 int collatz_length( const int starting_number )
 {
-    long n = starting_number;
+    unsigned int n = starting_number;
     int length = 1;
     while( n > 1)
     {
         if( n % 2 )
         {
             n = (3*n)+1;
-            printf("odd: %ld\n", n);
         }
         else
         {
             n = n/2;
-            printf("even: %ld\n", n);
         }
         length++;
     }
