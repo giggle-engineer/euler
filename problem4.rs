@@ -45,7 +45,7 @@ fn main()
 	assert!( length(number)==4 );
 	assert!( is_plaindrome(number)==true );
 	assert!( is_plaindrome(91229)==false );
-	let start:u64 = precise_time_ns();
+	//let start:u64 = precise_time_ns();
 	let mut product = 0;
 	let mut palindrome = 0;
 	for i in range( 100i, 1000 )
@@ -63,7 +63,7 @@ fn main()
 			//println!( "{}", product );
 		}
 	}
-	let end:u64 = precise_time_ns();
-	let seconds:float  = (end-start)/CLOCKS_PER_SECOND;
+	//let end:u64 = precise_time_ns();
+	//let seconds:float  = (end-start)/CLOCKS_PER_SECOND;
 	println!( "largest palindrome: {}", palindrome );
 }
