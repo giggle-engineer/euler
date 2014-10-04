@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
+#include <time.h>
 
 int getDigit( const int number, int place )
 {
@@ -41,6 +42,7 @@ int main( int argc, char **argv )
 	assert( length(number)==4 );
 	assert( isPalindrome(number)==1 );
 	assert( isPalindrome(91229)==0 );
+	clock_t start = clock();
 	int product = 0;
 	int palindrome = 0;
 	for( int i = 100; i < 1000; i++ )
@@ -54,9 +56,11 @@ int main( int argc, char **argv )
 				{
 					palindrome=product;
 				}
-				printf( "%d\n", product );
+				//printf( "%d\n", product );
 			}
 		}
 	}
-	printf( "largest palindrome: %d\n", palindrome );
+	clock_t end = clock();
+    float seconds = (float)(end - start) / CLOCKS_PER_SEC;
+	printf( "largest palindrome: %d took %f seconds\n", palindrome, seconds);
 }
